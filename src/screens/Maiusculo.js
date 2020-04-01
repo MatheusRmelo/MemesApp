@@ -9,6 +9,8 @@ import {
     Share
 } from 'react-native'
 
+import Button from '../components/Button'
+import maiusculoImg from '../assets/imgs/maiusculo.jpg'
 
 export default class Maiusculo extends Component {
     state = {
@@ -53,13 +55,13 @@ export default class Maiusculo extends Component {
     
     render(){
         return(
-            <View style={styles.background} >
+            <ImageBackground source={maiusculoImg} style={styles.background} >
                 <Text style={styles.title}>Digite o texto para transformar</Text>
                 <TextInput placeholder='O texto para ser transformado' multiline={true} style={styles.input} value={this.state.text} onChangeText={text => this.setState({text})} />
                 <TextInput placeholder='Resultado' multiline={true} style={styles.input} value={this.state.result} onChangeText={result => this.setState({result})} />
                 <View style={styles.buttons}>
-                    <TouchableOpacity style={[styles.button, {marginRight:10 }]} onPress={this.onShare}> 
-                        <Text style={styles.buttonText}>Compartilhar</Text>
+                    <TouchableOpacity style={{marginRight:10}} onPress={this.onShare}> 
+                        <Button text='Compartilhar' />
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.button} onPress={() => this.setState({ text: ''})}> 
                         <Text style={styles.buttonText}>Limpar</Text>
@@ -72,7 +74,7 @@ export default class Maiusculo extends Component {
                 </View>
                     
                 
-            </View>
+            </ImageBackground>
         )
     }
 }
