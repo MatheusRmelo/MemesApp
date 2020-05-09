@@ -1,5 +1,5 @@
 # MemesApp
-Entre na pasta executaveis e instale em seu dispositivo ou emulador a conforme a versão.
+Procure os executaveis e instale em seu dispositivo ou emulador a conforme a versão.
 Meu moto g4 play : standalone-armeabi_v7a_xxhdpi.apk
 
 
